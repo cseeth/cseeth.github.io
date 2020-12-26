@@ -62,7 +62,7 @@ $('.shared-header')[0].innerHTML =
     <div class="top-bar-boxed flex items-center">
         <!-- BEGIN: Logo -->
         <div class="-intro-x hidden md:flex">
-        <a href="http://cseeth.com"><img src="./img/cse-ethb.png" style="width: 4rem; margin-top: 0rem;"></a>
+        <a href="http://ethcse.com"><img src="./img/cse-ethb.png" style="width: 4rem; margin-top: 0rem;"></a>
             <span class="text-white text-lg ml-3" style="padding-top: 0.2rem;font-size: 28px;padding-left: 5px;font-weight: 500;color: #ecf590;"></span>
         </div>
         <!-- END: Logo -->
@@ -95,7 +95,7 @@ setInterval(() => {
 function openMenuM() {
     if (mmO) {
         mmO = false
-        $('.mobile-exten')[0].style.display = "none"
+        $('.mobile-exten')[0].style.display = "non"
     } else {
         mmO = true
         $('.mobile-exten')[0].style.display = "block"

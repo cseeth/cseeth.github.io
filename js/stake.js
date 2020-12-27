@@ -614,9 +614,10 @@ function mobileStakeAdjuster(){
 	$('.mobile-stake-resize')[0].style.fontSize = "8px"
 	
 	//Stake Bonus Info
-	$('.bonus-div-0')[0].style.width = "100vw"
+    $('.bonus-div-0')[0].style.width = "50vw"
+    $('.bonus-div-0')[0].style.height = "100vw"
 	$('.bonus-div-1')[0].style.width = "100vw"
-	$('.bonus-div-2')[0].style.width = "100vw"
+    $('.bonus-div-2')[0].style.width = "100vw"
 	$('.bonus-div-3')[0].style.width = "100vw"
 
 	//End Mobile Active Stakes Header Adjustments

@@ -371,16 +371,11 @@ function calcDividends(elm, lockedDay, stakedDays, stakeShares) {
 					let divs = item.dayDividends
 					let userShares = item.dayStakeSharesTotal
 					let shares = stakeShares
-					if(userShares == 0){
-						userShares = 1
-						shares = 0
-					}
-					if(Number.isNaN(divs))
-						divs = 0
-					if(Number.isNaN(shares))
-						shares = 0
-					if(Number.isNaN(stakeShares))
-						shares = 0
+					if(Number.isNaN(divs) || Number.isNaN(shares) || Number.isNaN(userShares) || shares == 0 || userShares == 0){
+                        divs = 0
+                        shares = 1
+                        userShares = 1
+                      }
                     addUpDivs += ( (divs / 1e18) * 0.97 ) * shares / userShares
                     $(`.${elm}`)[0].innerHTML = abbreviate_number((addUpDivs), 7) + " ETH"
                 }

@@ -381,7 +381,7 @@ function calcDividends(elm, lockedDay, stakedDays, stakeShares) {
 						shares = 0
 					if(Number.isNaN(stakeShares))
 						shares = 0
-                    addUpDivs += ( (divs / 1e18) * 0.85 ) * shares / userShares
+                    addUpDivs += ( (divs / 1e18) * 0.97 ) * shares / userShares
                     $(`.${elm}`)[0].innerHTML = abbreviate_number((addUpDivs), 7) + " ETH"
                 }
             })

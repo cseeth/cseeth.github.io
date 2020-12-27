@@ -26,7 +26,7 @@ $('.shared-header')[0].innerHTML =
                 </a>
             </li>
             <li>
-                <a href="auction.html" class="menu">
+                <a href="index.html" class="menu">
                     <div class="menu__icon"> <i data-feather="server"></i> </div>
                     <div class="menu__title"> Auction </div>
                 </a>
@@ -95,7 +95,7 @@ setInterval(() => {
 function openMenuM() {
     if (mmO) {
         mmO = false
-        $('.mobile-exten')[0].style.display = "non"
+        $('.mobile-exten')[0].style.display = "none"
     } else {
         mmO = true
         $('.mobile-exten')[0].style.display = "block"

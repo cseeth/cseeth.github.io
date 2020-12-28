@@ -283,7 +283,7 @@ function mobileAuctionAdjuster(){
 		$('.mobile-auction-hide')[i].innerHTML = ""
 	}
 	
-	let headers = "Day &nbsp&nbsp&nbsp&nbsp Available CSE &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp  Receive &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Your Entry &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Total Entries &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Status "
+	let headers = "Day &nbsp&nbsp&nbsp&nbsp CSE Pool &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp  Receive &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Your Entry &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Total Entries &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Status "
 	$('.auction-headers')[0].innerHTML = headers
 	$('.auction-headers')[0].style.fontSize = "8px"
 	$('.auction-headers')[0].style.width = "100vw"

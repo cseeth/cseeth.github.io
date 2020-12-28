@@ -3,7 +3,8 @@ let lobbies = []
 
 function run_Auction() {
 	if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
-		getTodayLobbyMobile()
+        getTodayLobbyMobile()
+        getTodayLobby()
 		getPastLobbiesMobile()
 	}else{
 		getTodayLobby()

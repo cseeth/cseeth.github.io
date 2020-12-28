@@ -667,22 +667,22 @@ function renderMyStakesMobile(data) {
             `
         <div class="intro-y">
             <div class="${activeRow} row-body inbox__item inline-block sm:block text-gray-700 bg-gray-100 border-b border-gray-200"
-                style="cursor: auto; color: #005af2; ">
+                style="cursor: auto; color: #85B6FF; ">
                 <div class="flex px-5 py-3"
-                    style="padding-left: .0rem; padding-right: .0rem; color: #005af2;">
+                    style="padding-left: .0rem; padding-right: .0rem; color: #85B6FF;">
     
                     <div class="w-64 sm:w-auto truncate"
-                        style="width: 25vw; text-align:center; font-weight: 900; color: #005af2;">
+                        style="width: 25vw; text-align:center; font-weight: 900; color: #85B6FF;">
                         <span style="font-size: 8px;"class="inbox__item--highlight">${item.lockedDay + item.stakedDays+1}</span>
                     </div>
         
                     <div class="w-64 sm:w-auto truncate"
-                        style="width: 25vw; text-align:center; font-weight: 900; color: #005af2;">
+                        style="width: 25vw; text-align:center; font-weight: 900; color: #85B6FF;">
                         <span style="font-size: 8px;"class="inbox__item--highlight">${abbreviate_number(parseInt(stakedSuns) / DESI, 2)}</span>
                     </div>
 
                     <div class="w-64 sm:w-auto truncate"
-                        style="width: 25vw; text-align:center; font-weight: 900; color: #005af2;">
+                        style="width: 25vw; text-align:center; font-weight: 900; color: #85B6FF;">
                         <span style="font-size: 8px;"class="dividends-it-${ii} inbox__item--highlight" id="0">--</span>
                     </div>
     

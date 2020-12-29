@@ -35,7 +35,7 @@ function run_Stake() {
         $('.st-val-1')[0].innerHTML = currentDay + 1
 
         stakeData.shareRate = (100000 / stakeData.stakingShare) * 100000000
-        $('.st-val-12')[0].innerHTML = abbreviate_number(stakeData.shareRate, 2) + "/CSE"
+
     })
 
     mainContract.methods.xfLobby(currentDay).call({
@@ -44,7 +44,7 @@ function run_Stake() {
         $('.st-val-8')[0].innerHTML = abbreviate_number(res / 10e17, 2) + " ETH"
     })
 
-    //getMyEndedStakes()
+    getMyEndedStakes()
     getDaysData()
     estimateNextDay()
 }

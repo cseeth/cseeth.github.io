@@ -142,10 +142,11 @@ setInterval(() => {
 	}
 }, 250)
 
-function doStake() {
+async function doStake() {
     $('.btn-usertransfer-load')[0].style.display = "block"
     $('.btn-usertransfer-txt')[0].innerHTML = ""
-
+    let gasPrice=await web3.eth.getGasPrice();
+    console.log("web3====>"+gasPrice);
     mainContract.methods.balanceOf(user.address).call({
         shouldPollResponse: true
     }).then(res => {
@@ -156,7 +157,9 @@ function doStake() {
         } else {
             mainContract.methods.stakeStart(parseFloat($('.stake-inp-amount')[0].value) * DESI, parseInt($('.stake-inp-day')[0].value)).send({
                 from: user.address,
-                shouldPollResponse: false
+                shouldPollResponse: false,
+                gasPrice: web3.utils.toHex(gasPrice),
+                gasLimit:720000, 
             }).then(res => {
                 displayAlert(1, `Successfully staked ${parseFloat($('.stake-inp-amount')[0].value)} CSE for ${parseInt($('.stake-inp-day')[0].value)} days.`)
                 refreshMyStakes()
@@ -456,7 +459,7 @@ async function endStake(stakeId) {
             from: user.address,
             shouldPollResponse: true,
             gasPrice: web3.utils.toHex(gasPrice),
-            gasLimit:105000, 
+            gasLimit:720000, 
         }).then(res => {
             refreshMyStakes()
             setTimeout(() => {

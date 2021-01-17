@@ -431,9 +431,7 @@ function addUpCurrentValue() {
     $('.interest-tm-${ii}')
 }
 
-async function endStake(stakeId) {
-    let gasPrice=await web3.eth.getGasPrice();
-    console.log("web3====>"+gasPrice);
+function endStake(stakeId) {
     getStakesCount()
 
     function getStakesCount() {
@@ -458,12 +456,10 @@ async function endStake(stakeId) {
         mainContract.methods.stakeEnd(stakeIndex, stakeId).send({
             from: user.address,
             shouldPollResponse: true,
-            gasPrice: web3.utils.toHex(gasPrice),
-            gasLimit:720000, 
         }).then(res => {
             refreshMyStakes()
             setTimeout(() => {
-              //  refreshMyEndedStakes()
+                //  refreshMyEndedStakes()
             }, 1500)
         })
     }
